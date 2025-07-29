@@ -1,0 +1,232 @@
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Pacifico&display=swap');
+
+/* --- Variáveis de Cor (Tema Sereia) --- */
+:root {
+    --cor-rosa: #f8c5dd;
+    --cor-azul: #a7d8f9;
+    --cor-lilas: #dcd0ff;
+    --cor-fundo: #fdf6ff;
+    --cor-texto: #333;
+    --cor-branco: #fff;
+    --gradiente-sereia: linear-gradient(120deg, var(--cor-rosa), var(--cor-azul), var(--cor-lilas));
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Base e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Cabeçalho --- */
+.cabecalho {
+    background: var(--cor-branco);
+    padding: 1rem 0;
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Estilo da Logo (IMAGEM) --- */
+.logo img {
+    /* Define a altura da logo. A largura se ajustará automaticamente */
+    height: 100px; 
+    display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+.cabecalho nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cabecalho nav a:hover {
+    color: var(--cor-rosa);
+}
+
+/* --- Seção de Destaque --- */
+.destaque {
+    background: var(--gradiente-sereia);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 6rem 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.destaque h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background: var(--cor-branco);
+    color: var(--cor-rosa);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-destaque:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* --- Seção do Catálogo --- */
+.catalogo {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.catalogo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--cor-texto);
+}
+
+.categorias-filtro {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para quebrar a linha em telas pequenas */
+}
+
+.btn-categoria {
+    background: none;
+    border: 2px solid var(--cor-lilas);
+    color: var(--cor-lilas);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-categoria:hover, .btn-categoria.ativo {
+    background: var(--cor-lilas);
+    color: var(--cor-branco);
+}
+
+
+/* --- Grade de Produtos (Responsiva) --- */
+.produtos-grid {
+    display: grid;
+    /* Para celular: 1 coluna */
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+}
+
+.produto-card {
+    background: var(--cor-branco);
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    overflow: hidden; /* Garante que a imagem não saia do card arredondado */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 300px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+}
+
+.produto-card h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.produto-descricao {
+    padding: 0 1.5rem;
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+    font-size: 0.9rem;
+}
+
+.produto-preco {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-azul);
+    margin: 1rem 0;
+}
+
+.btn-comprar {
+    background: var(--gradiente-sereia);
+    color: var(--cor-branco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.btn-comprar:hover {
+    opacity: 0.9;
+}
+
+/* --- Rodapé --- */
+.rodape {
+    background: var(--cor-lilas);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* --- RESPONSIVIDADE (Mobile-First) --- */
+
+/* Telas maiores (Tablets) */
+@media (min-width: 600px) {
+    .produtos-grid {
+        /* 2 colunas para tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telas grandes (Desktops) */
+@media (min-width: 992px) {
+    .produtos-grid {
+        /* 3 colunas para desktops */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

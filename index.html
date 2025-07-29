@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Sereia Fashion</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Logo Sereia Fashion">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#vestidos">Vestidos</a></li>
+                    <li><a href="#blusas">Blusas</a></li>
+                    <li><a href="#saias">Saias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <div class="container">
+                <h2>Coleção Encanto do Mar</h2>
+                <p>Peças exclusivas com a magia das cores do oceano.</p>
+                <a href="#catalogo" class="btn-destaque">Ver Coleção</a>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalogo">
+            <div class="container">
+                <h2>Nosso Catálogo</h2>
+                
+                <div class="categorias-filtro">
+                    <button class="btn-categoria ativo" data-filtro="todos">Todos</button>
+                    <button class="btn-categoria" data-filtro="vestidos">Vestidos</button>
+                    <button class="btn-categoria" data-filtro="blusas">Blusas</button>
+                    <button class="btn-categoria" data-filtro="saias">Saias</button>
+                </div>
+
+                <div class="produtos-grid">
+                    
+                    <div class="produto-card" data-categoria="vestidos">
+                        <img src="imagens/produtos/vestido_red.jpg" alt="Vestido Vermelho Elegante">
+                        <h3>Vestido Sonho de Sereia</h3>
+                        <p class="produto-descricao">Vestido longo em tom vermelho, perfeito para ocasiões especiais.</p>
+                        <div class="produto-preco">R$ 299,90</div>
+                        <button class="btn-comprar">Ver Detalhes</button>
+                    </div>
+
+                    <div class="produto-card" data-categoria="blusas">
+                        <img src="imagens/produtos/blusa_azul.jpg" alt="Blusa Azul Céu">
+                        <h3>Blusa Brisa do Mar</h3>
+                        <p class="produto-descricao">Blusa leve e fluida na cor azul céu, ideal para o dia a dia.</p>
+                        <div class="produto-preco">R$ 149,90</div>
+                        <button class="btn-comprar">Ver Detalhes</button>
+                    </div>
+
+                    <div class="produto-card" data-categoria="saias">
+                        <img src="imagens/produtos/saia-lilas.jpg" alt="Saia Lilás Plissada">
+                        <h3>Saia Encanto Lilás</h3>
+                        <p class="produto-descricao">Saia midi plissada em um tom de lilás suave e romântico.</p>
+                        <div class="produto-preco">R$ 189,90</div>
+                        <button class="btn-comprar">Ver Detalhes</button>
+                    </div>
+                    
+                    <div class="produto-card" data-categoria="vestidos">
+                        <img src="imagens/produtos/vestido-lilas.jpg" alt="Vestido Lilás Curto">
+                        <h3>Vestido Lavanda</h3>
+                        <p class="produto-descricao">Vestido curto e fresco para o verão, em tom lavanda.</p>
+                        <div class="produto-preco">R$ 229,90</div>
+                        <button class="btn-comprar">Ver Detalhes</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2025 Sereia Fashion. Todos os direitos reservados.</p>
+            <p>Siga-nos nas redes sociais!</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    
+</body>
+</html>
